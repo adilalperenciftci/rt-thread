@@ -63,7 +63,7 @@ jobs:
   test:
     runs-on: ubuntu-22.04
     name: ${{ matrix.platform.UTEST }} :${{ matrix.config_file }}
-    if: github.repository_owner == 'RT-Thread'
+    if: matrix.platform.UTEST == 'AARCH64-rtsmart'
     strategy:
       fail-fast: false
       matrix:
